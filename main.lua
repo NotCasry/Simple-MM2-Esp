@@ -57,7 +57,7 @@ end)
 spawn(function()
     while task.wait() do
         for _, p in pairs(Players:GetChildren()) do
-            if workspace:FindFirstChild(p.Name) ~= nil and _G.EspEnabled == true and p.Name ~= p.Name then
+            if workspace:FindFirstChild(p.Name) ~= nil and _G.EspEnabled == true and p.Name ~= Player.Name then
                 local char = workspace:FindFirstChild(p.Name)
     
                 if not char:FindFirstChild("BoxHead") then
@@ -88,7 +88,7 @@ spawn(function()
     
                 end
     
-            elseif workspace:FindFirstChild(p.Name) ~= nil and _G.EspEnabled == false and p.Name ~= p.Name then
+            elseif workspace:FindFirstChild(p.Name) ~= nil and _G.EspEnabled == false and p.Name ~= Player.Name then
                 local char = workspace:FindFirstChild(p.Name)
     
                 if char:FindFirstChild("BoxHead") then
